@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N&R Travels</title>
 
-    <link rel="shortcut icon" type="image/png" href="Images/Home/logo.jpeg" />
+    <link rel="shortcut icon" type="image/png" href="Images/Home/logo-white.jpeg" />
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -24,13 +24,13 @@
 
 <body>
 
-    <div class="flex flex-col h-screen justify-between">
+    <div class="container mx-auto flex flex-col h-screen space-y-32 md:space-y-0 md:justify-between">
         <!-- navbar start -->
         <nav
             class="sticky top-0 sm:top-5 container mx-auto flex items-center justify-between  py-5 sm:py-2 p-2 pr-8 bg-white sm:rounded-full shadow-lg">
 
             <!-- Logo -->
-            <div class="h-10 w-48">
+            <div class="h-12 w-48">
                 <img src="Images/Home/logo.png" alt="" class="h-full w-full object-cover" />
             </div>
             <!-- Logo -->
@@ -69,7 +69,7 @@
         <!-- navbar end -->
 
         <!-- Home Section -->
-        <section id="Home" class="container mx-auto p-3 md:px-14 md:py-8">
+        <section id="Home" class="p-3 md:px-14 md:py-8">
 
             <div class="item-gradient"></div>
             <!-- Background Container -->
@@ -79,17 +79,20 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="Images/Home/background-image-1.jpg" alt="" />
+                            <img src="Images/Home/tajmahal.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/Home/sydney.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/Home/flight.jpg" alt="" />
                         </div>
                         <div class="swiper-slide">
                             <img src="Images/Home/background-image-1.jpg" alt="" />
                         </div>
-                        <!-- <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="" />
-                </div> -->
+                        <div class="swiper-slide">
+                            <img src="Images/Home/hotel.jpg" alt="" />
+                        </div>
                     </div>
                 </div>
 
@@ -97,13 +100,59 @@
             <!-- Background Container -->
 
             <!-- hero section -->
-            <section id="hero" class="flex flex-col space-y-10">
+            <section id="hero" class="flex flex-col space-y-3">
 
                 <!-- explore -->
-                <div class="flex flex-col space-y-8 max-w-lg border border-white mt-12">
-                    <h1 class="text-white text-5xl font-play">Explore the world with exciting people</h1>
+                <div class="flex flex-col space-y-6 max-w-lg mt-12 text-center md:text-start">
+                    <h1 class="text-white text-4xl md:text-6xl font-bold font-play">Explore the world with exciting
+                        people</h1>
+                    <p class="text-white text-sm md:text-lg font-sans">We help people find co travellers and also
+                        structure their
+                        travel plans </p>
+                    <!-- <a href="#Services">
+                        <button
+                            class="px-6 py-2 border-2 border-white text-white rounded-full hover:bg-white hover:text-gray-900 transition">
+                            See more
+                        </button>
+                    </a> -->
                 </div>
                 <!-- explore -->
+                <hr />
+
+                <!-- Choose boxes container -->
+                <div class="text-white text-center md:text-start">
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <!-- box 1 -->
+                                <div class="space-y-3">
+                                    <p class="font-play text-xl">01</p>
+                                    <p class="text-lg font-bold">Chose a place, activity and time</p>
+                                    <p class="text-sm">We help people find co travellers and also structure their travel
+                                        plans </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- box 2 -->
+                                <div class="space-y-3">
+                                    <p class="font-play text-xl">02</p>
+                                    <p class="text-lg font-bold">Chose a place, activity and time</p>
+                                    <p class="text-sm">We help people find co travellers and also structure their travel
+                                        plans </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- box 3 -->
+                                <div class="space-y-3">
+                                    <p class="font-play text-xl">03</p>
+                                    <p class="text-lg font-bold">Chose a place, activity and time</p>
+                                    <p class="text-sm">We help people find co travellers and also structure their travel
+                                        plans </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </section>
             <!-- hero section -->

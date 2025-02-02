@@ -9,14 +9,9 @@ var swiper = new Swiper(".mySwiper", {
         delay: 2500,
         disableOnInteraction: false,
     },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
 });
 
 // nav togler
-
 const btn = document.getElementById('menu-btn');
 const menu = document.getElementById('menu');
 
@@ -41,3 +36,26 @@ function navToggle() {
         }, 800); // Match duration of CSS animation
     }
 }
+
+var swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 1,
+    spaceBetween: 10,    
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        }
+    },
+});
