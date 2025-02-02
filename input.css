@@ -5,7 +5,7 @@
 /* General Style */
 @layer base {
     * {
-        @apply m-0 p-0 box-border no-underline font-play;
+        @apply m-0 p-0 box-border no-underline;
     }
 }
 
@@ -36,4 +36,93 @@
 
 .item-gradient-2 {
     @apply absolute top-3/4 bottom-0 right-0 left-0 bg-gradient-to-b to-slate-900 from-transparent opacity-70 -z-10;
+}
+
+.hvr::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    border-radius: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    width: 0;
+    transition: all .2s ease;
+}
+
+.hvr:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+/* humburger menu */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transform: all 0.25s;
+    position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: white;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+    display: none;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+/* Animation CSS */
+@keyframes scroll-right-side-animation {
+    0% {
+        opacity: 0;
+        transform: translateX(350px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.scroll-right-side-animation {
+    opacity: 0;
+}
+
+.animate-once {
+    opacity: 1;
+}
+
+.scroll-right-side-animation.animate-once {
+    animation: scroll-right-side-animation 0.8s ease forwards;
 }
