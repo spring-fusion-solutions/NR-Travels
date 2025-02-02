@@ -23,23 +23,21 @@ const menu = document.getElementById('menu');
 btn.addEventListener('click', navToggle);
 
 function navToggle() {
-    btn.classList.toggle('open');
-    menu.classList.toggle('flex');
-    menu.classList.toggle('hidden');
+    if (menu.classList.contains('hidden')) {
+        btn.classList.add('open');
+        // Opening the menu
+        menu.classList.remove('hidden', 'animate-out');
+        menu.classList.add('flex', 'animate-in');
+    } else {
+        // Closing the menu with animation
+        btn.classList.remove('open');
+        menu.classList.remove('animate-in');
+        menu.classList.add('animate-out');
+
+        // Wait for animation to complete before hiding
+        setTimeout(() => {
+            menu.classList.add('hidden');
+            menu.classList.remove('flex', 'animate-out');
+        }, 800); // Match duration of CSS animation
+    }
 }
-
-// Animation JS
-const elements = document.querySelectorAll('.scroll-right-side-animation');
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-once');
-            observer.unobserve(entry.target); // Stop observing once animated
-        }
-    });
-}, {
-    threshold: 0.4 // Trigger when 40% of the element is in view
-});
-
-elements.forEach(el => observer.observe(el));

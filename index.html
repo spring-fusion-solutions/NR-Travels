@@ -24,54 +24,23 @@
 
 <body>
 
-    <!-- Home Section -->
-    <section id="Home" class="container mx-auto p-3 md:px-14 md:py-8">
-
-        <div class="item-gradient"></div>
-        <!-- Background Container -->
-        <div class="absolute top-0 bottom-0 right-0 left-0 -z-20">
-
-            <!-- Swiper -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="Images/Home/background-image-1.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="Images/Home/background-image-1.jpg" alt="" />
-                    </div>
-                    <!-- <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="" />
-                    </div> -->
-                </div>
-            </div>
-
-        </div>
-        <!-- Background Container -->
-
-
+    <div class="flex flex-col h-screen justify-between">
         <!-- navbar start -->
-        <nav class="flex items-center justify-between p-2 sm:p-4 text-white">
+        <nav
+            class="sticky top-0 sm:top-5 container mx-auto flex items-center justify-between  py-5 sm:py-2 p-2 pr-8 bg-white sm:rounded-full shadow-lg">
 
             <!-- Logo -->
-            <div class="border border-white h-10 w-40 rounded-2xl overflow-hidden">
-                <img src="Images/Home/logo.jpeg" alt="" class="h-full w-full object-cover" />
+            <div class="h-10 w-48">
+                <img src="Images/Home/logo.png" alt="" class="h-full w-full object-cover" />
             </div>
             <!-- Logo -->
 
             <!-- Nav Items -->
             <div class="hidden md:flex items-center md:space-x-3 lg:space-x-12 font-sans">
-                <a href="#" class="hvr relative">Places</a>
-                <a href="#" class="hvr relative">About</a>
-                <a href="#" class="hvr relative">Blog</a>
-                <a href="#" class="hvr relative">Contact</a>
-                <button
-                    class="px-6 py-2 border font-light duration-200 border-white rounded-full hover:bg-white hover:text-black transition">
-                    Take a Trip
-                </button>
+                <a href="#Home" class="hvr relative">Home</a>
+                <a href="#About" class="hvr relative">About</a>
+                <a href="#Services" class="hvr relative">Services</a>
+                <a href="#Testimonial" class="hvr relative">Testimonial</a>
             </div>
             <!-- Nav Items -->
 
@@ -85,28 +54,64 @@
 
             </button>
 
+            <!-- mobile menu -->
+            <div id="menu" class="md:hidden scroll-right-side-animation items-center absolute top-0 bottom-0 left-0 hidden flex-col w-full min-h-screen
+        py-1 pt-40 px-12 space-y-4 text-lg backdrop-blur-sm bg-white/30">
+
+                <a href="#" class="hvr relative">Home</a>
+                <a href="#" class="hvr relative">About</a>
+                <a href="#" class="hvr relative">Services</a>
+                <a href="#" class="hvr relative">Testimonial</a>
+
+            </div>
+
         </nav>
         <!-- navbar end -->
 
-        <!-- mobile menu -->
-        <div id="menu"
-            class="md:hidden scroll-right-side-animation items-center absolute top-0 bottom-0 left-0 hidden flex-col w-full min-h-screen py-1 pt-40 px-12 space-y-4 text-lg text-white bg-black">
+        <!-- Home Section -->
+        <section id="Home" class="container mx-auto p-3 md:px-14 md:py-8">
 
-            <a href="#" class="hvr relative">Places</a>
-            <a href="#" class="hvr relative">About</a>
-            <a href="#" class="hvr relative">Blog</a>
-            <a href="#" class="hvr relative">Contact</a>
-            <button
-                class="px-6 py-2 border font-light duration-200 border-white rounded-full hover:bg-white hover:text-black transition">
-                Take a Trip
-            </button>
+            <div class="item-gradient"></div>
+            <!-- Background Container -->
+            <div class="absolute top-0 bottom-0 right-0 left-0 -z-20">
 
-        </div>
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="Images/Home/background-image-1.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/Home/background-image-1.jpg" alt="" />
+                        </div>
+                        <!-- <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="" />
+                </div> -->
+                    </div>
+                </div>
 
-        <div class="item-gradient-2"></div>
-    </section>
-    <!-- Home Section -->
+            </div>
+            <!-- Background Container -->
 
+            <!-- hero section -->
+            <section id="hero" class="flex flex-col space-y-10">
+
+                <!-- explore -->
+                <div class="flex flex-col space-y-8 max-w-lg border border-white mt-12">
+                    <h1 class="text-white text-5xl font-play">Explore the world with exciting people</h1>
+                </div>
+                <!-- explore -->
+
+            </section>
+            <!-- hero section -->
+
+            <div class="item-gradient-2"></div>
+        </section>
+        <!-- Home Section -->
+    </div>
 
 
     <!-- Font Awesome -->

@@ -45,7 +45,7 @@
     border-radius: 2px;
     bottom: -2px;
     left: 0;
-    background-color: white;
+    background-color: black;
     visibility: hidden;
     width: 0;
     transition: all .2s ease;
@@ -73,7 +73,7 @@
     height: 2px;
     top: 0;
     left: 0;
-    background: white;
+    background: black;
     transform: rotate(0);
     transition: all 0.5s;
 }
@@ -103,15 +103,25 @@
 }
 
 /* Animation CSS */
-@keyframes scroll-right-side-animation {
+@keyframes slide-in {
     0% {
         opacity: 0;
         transform: translateX(350px);
     }
-
-    to {
+    100% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(350px);
     }
 }
 
@@ -119,10 +129,10 @@
     opacity: 0;
 }
 
-.animate-once {
-    opacity: 1;
+.animate-in {
+    animation: slide-in 0.8s ease forwards;
 }
 
-.scroll-right-side-animation.animate-once {
-    animation: scroll-right-side-animation 0.8s ease forwards;
+.animate-out {
+    animation: slide-out 0.8s ease forwards;
 }
