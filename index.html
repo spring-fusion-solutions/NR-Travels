@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -24,76 +24,77 @@
 
 <body>
 
-    <!-- Home Section -->
-    <div class="container mx-auto flex flex-col h-screen space-y-32 md:space-y-0 md:justify-between">
-        <!-- navbar start -->
-        <nav
-            class="sticky top-0 sm:top-5 container mx-auto flex items-center justify-between  py-5 sm:py-2 p-2 pr-8 bg-white sm:rounded-full shadow-lg">
+    <!-- navbar start -->
+    <nav
+        class="sticky z-50 top-0 sm:top-5 container mx-auto flex items-center justify-between  py-5 sm:py-2 p-2 pr-8 bg-white sm:rounded-full shadow-lg">
 
-            <!-- Logo -->
-            <div class="h-12 w-48">
-                <img src="Images/Home/logo.png" alt="" class="h-full w-full object-cover" />
-            </div>
-            <!-- Logo -->
+        <!-- Logo -->
+        <div class="h-12 w-48">
+            <img src="Images/Home/logo.png" alt="" class="h-full w-full object-cover" />
+        </div>
+        <!-- Logo -->
 
-            <!-- Nav Items -->
-            <div class="hidden md:flex items-center md:space-x-3 lg:space-x-12 font-sans">
-                <a href="#Home" class="hvr relative">Home</a>
-                <a href="#About" class="hvr relative">About</a>
-                <a href="#Services" class="hvr relative">Services</a>
-                <a href="#Testimonial" class="hvr relative">Testimonial</a>
-                <a href="https://wa.me/+94777480806" target="_blank" rel="noopener noreferrer">
-                    <div class="flex flex-row space-x-2">
-                        <div>
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-
-                        <span>+94 77 748 0806</span>
+        <!-- Nav Items -->
+        <div class="hidden md:flex items-center md:space-x-3 lg:space-x-12 font-sans">
+            <a href="#Home" class="hvr relative text-[#FF0000]">Home</a>
+            <a href="#About" class="hvr relative hover:text-[#FF0000]">About</a>
+            <a href="#Services" class="hvr relative hover:text-[#FF0000]">Services</a>
+            <a href="#Testimonial" class="hvr relative hover:text-[#FF0000]">Testimonial</a>
+            <a href="https://wa.me/+94777480806" target="_blank" rel="noopener noreferrer">
+                <div class="flex flex-row space-x-2">
+                    <div>
+                        <i class="fa-solid fa-phone"></i>
                     </div>
-                </a>
 
-            </div>
-            <!-- Nav Items -->
+                    <span>+94 77 748 0806</span>
+                </div>
+            </a>
 
-            <!-- hamburger btn -->
-            <button title="hamburger" id="menu-btn" type="button"
-                class="z-40 mt-3 block hamburger md:hidden focus:outline-none">
+        </div>
+        <!-- Nav Items -->
 
-                <span class="hamburger-top"></span>
-                <span class="hamburger-middle"></span>
-                <span class="hamburger-bottom"></span>
+        <!-- hamburger btn -->
+        <button title="hamburger" id="menu-btn" type="button"
+            class="mt-3 block hamburger z-50 md:hidden focus:outline-none">
 
-            </button>
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
 
-            <!-- mobile menu -->
-            <div id="menu" class="md:hidden scroll-right-side-animation items-center absolute top-0 bottom-0 left-0 hidden flex-col w-full min-h-screen
-        py-1 pt-40 px-12 -z-10 space-y-4 text-lg backdrop-blur-sm bg-white/20 text-white">
+        </button>
 
-                <a href="#" class="hvr relative">Home</a>
-                <a href="#" class="hvr relative">About</a>
-                <a href="#" class="hvr relative">Services</a>
-                <a href="#" class="hvr relative">Testimonial</a>
-                <a href="https://wa.me/+94777480806" target="_blank" rel="noopener noreferrer">
-                    <div class="flex flex-row space-x-2">
-                        <div>
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
+        <!-- mobile menu -->
+        <div id="menu" class="md:hidden scroll-right-side-animation items-center fixed top-0 bottom-0
+    left-0 hidden flex-col w-full min-h-screen py-1 pt-40 px-12 space-y-4 text-lg
+    backdrop-blur-sm bg-white/20 text-white">
 
-                        <span>+94 77 748 0806</span>
+            <a href="#Home" class="hvr relative text-[#FF0000]">Home</a>
+            <a href="#About" class="hvr relative hover:text-[#FF0000]">About</a>
+            <a href="#Services" class="hvr relative hover:text-[#FF0000]">Services</a>
+            <a href="#Testimonial" class="hvr relative hover:text-[#FF0000]">Testimonial</a>
+            <a href="https://wa.me/+94777480806" target="_blank" rel="noopener noreferrer">
+                <div class="flex flex-row space-x-2">
+                    <div>
+                        <i class="fa-solid fa-phone"></i>
                     </div>
-                </a>
 
-            </div>
+                    <span>+94 77 748 0806</span>
+                </div>
+            </a>
 
-        </nav>
-        <!-- navbar end -->
+        </div>
 
+    </nav>
+    <!-- navbar end -->
+
+    <!-- Container for home Section -->
+    <div id="Home" class="container mx-auto flex flex-col h-screen space-y-32 md:space-y-0 md:justify-between">
         <!-- Home Section -->
-        <section id="Home" class="p-3 md:px-14 md:py-8">
+        <section class="p-3 md:px-14 md:py-8">
 
             <div class="item-gradient"></div>
             <!-- Background Container -->
-            <div class="absolute top-0 bottom-0 right-0 left-0 -z-20">
+            <div class="absolute top-0 bottom-0 right-0 left-0 -z-40">
 
                 <!-- Swiper -->
                 <div class="swiper mySwiper">
@@ -119,6 +120,7 @@
             </div>
             <!-- Background Container -->
 
+            <!-- whatspp -->
             <a href="https://wa.me/+94777480806" target="_blank" rel="noopener noreferrer"
                 class="fixed right-8 bottom-8 md:right-10 md:bottom-10 text-white">
                 <div class="btn-blur w-16 h-16 md:w-20 md:h-20">
@@ -133,7 +135,8 @@
 
                 <!-- explore -->
                 <div class="flex flex-col space-y-6 max-w-lg mt-12 text-center md:text-start">
-                    <h1 class="text-white text-4xl md:text-6xl font-bold font-play">Explore the world with NR Travels
+                    <h1 class="text-white text-4xl md:text-6xl font-semibold font-play">Explore the world with <span
+                            class="text-[#FF0000] font-extrabold">NR Travels</span>
                     </h1>
                     <p class="text-white text-sm md:text-lg font-sans">We help people find co travellers and also
                         structure their
@@ -148,7 +151,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <!-- box 1 -->
-                                <div class="space-y-3 -z-50">
+                                <div class="space-y-3">
                                     <p class="font-play text-xl">01</p>
                                     <p class="text-lg font-bold">Chose a place, activity and time</p>
                                     <p class="text-sm">We help people find co travellers and also structure their travel
@@ -157,7 +160,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <!-- box 2 -->
-                                <div class="space-y-3 -z-50">
+                                <div class="space-y-3">
                                     <p class="font-play text-xl">02</p>
                                     <p class="text-lg font-bold">Chose a place, activity and time</p>
                                     <p class="text-sm">We help people find co travellers and also structure their travel
@@ -166,7 +169,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <!-- box 3 -->
-                                <div class="space-y-3 -z-50">
+                                <div class="space-y-3">
                                     <p class="font-play text-xl">03</p>
                                     <p class="text-lg font-bold">Chose a place, activity and time</p>
                                     <p class="text-sm">We help people find co travellers and also structure their travel
@@ -184,8 +187,144 @@
         </section>
         <!-- Home Section -->
     </div>
-    <!-- Home Section -->
+    <!-- Container for home Section -->
 
+
+    <!-- Services -->
+    <section id="Services" class="container mx-auto py-12 space-y-7">
+
+        <h1 class="text-black px-12 md:px-0 max-w-3xl text-4xl md:text-6xl font-bold font-play">Services
+        </h1>
+
+        <div class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- item container -->
+                    <div class="item-container">
+
+                        <!-- item img -->
+                        <div class="group item">
+                            <img src="Images/Service/service-1.jpg" alt=""
+                                class="h-full object-cover w-full duration-200 group-hover:scale-110">
+                        </div>
+
+                        <!-- item desc container -->
+                        <div class="flex flex-col space-y-5 md:w-1/2 text-black">
+
+                            <div class="space-y-2 max-w-md py-6">
+                                <i class="fa-solid fa-car"></i>
+                                <p class="font-play text-4xl font-semibold">Rent a car</p>
+                                <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                                    laudantium
+                                    perferendis cupiditate vitae.</p>
+                                <a href="#" class="group text-sm font-semibold space-x-1 duration-500">
+                                    <span class="group-hover:text-[#FF0000]">Lets Go</span>
+                                    <span class="ml-2 group-hover:ml-3 group-hover:text-[#FF0000] duration-300">→</span>
+                                </a>
+                            </div>
+
+                            <div class="space-y-2 max-w-md py-6">
+                                <i class="fa-solid fa-bed"></i>
+                                <p class="font-play text-4xl font-semibold">Get a hotel</p>
+                                <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                                    laudantium
+                                    perferendis cupiditate vitae.</p>
+                                <a href="#" class="group text-sm font-semibold space-x-1 duration-500">
+                                    <span class="group-hover:text-[#FF0000]">Lets Go</span>
+                                    <span class="ml-2 group-hover:ml-3 group-hover:text-[#FF0000] duration-300">→</span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <!-- item container -->
+                    <div class="item-container">
+
+                        <!-- item img -->
+                        <div class="group item">
+                            <img src="Images/Service/service-1.jpg" alt=""
+                                class="h-full object-cover w-full duration-200 group-hover:scale-110">
+                        </div>
+
+                        <!-- item desc container -->
+                        <div class="flex flex-col space-y-5 md:w-1/2 text-black">
+
+                            <div class="space-y-2 max-w-md py-6">
+                                <i class="fa-solid fa-car"></i>
+                                <p class="font-play text-4xl font-semibold">AAaaa a car</p>
+                                <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                                    laudantium
+                                    perferendis cupiditate vitae.</p>
+                                <a href="#" class="group text-sm font-semibold space-x-1 duration-500">
+                                    <span class="group-hover:text-[#FF0000]">Lets Go</span>
+                                    <span class="ml-2 group-hover:ml-3 group-hover:text-[#FF0000] duration-300">→</span>
+                                </a>
+                            </div>
+
+                            <div class="space-y-2 max-w-md py-6">
+                                <i class="fa-solid fa-bed"></i>
+                                <p class="font-play text-4xl font-semibold">Get a hotel</p>
+                                <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                                    laudantium
+                                    perferendis cupiditate vitae.</p>
+                                <a href="#" class="group text-sm font-semibold space-x-1 duration-500">
+                                    <span class="group-hover:text-[#FF0000]">Lets Go</span>
+                                    <span class="ml-2 group-hover:ml-3 group-hover:text-[#FF0000] duration-300">→</span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <!-- item container -->
+                    <div class="item-container">
+
+                        <!-- item img -->
+                        <div class="group item">
+                            <img src="Images/Service/service-1.jpg" alt=""
+                                class="h-full object-cover w-full duration-200 group-hover:scale-110">
+                        </div>
+
+                        <!-- item desc container -->
+                        <div class="flex flex-col space-y-5 md:w-1/2 text-black">
+
+                            <div class="space-y-2 max-w-md py-6">
+                                <i class="fa-solid fa-car"></i>
+                                <p class="font-play text-4xl font-semibold">Rent a car</p>
+                                <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                                    laudantium
+                                    perferendis cupiditate vitae.</p>
+                                <a href="#" class="group text-sm font-semibold space-x-1 duration-500">
+                                    <span class="group-hover:text-[#FF0000]">Lets Go</span>
+                                    <span class="ml-2 group-hover:ml-3 group-hover:text-[#FF0000] duration-300">→</span>
+                                </a>
+                            </div>
+
+                            <div class="space-y-2 max-w-md py-6">
+                                <i class="fa-solid fa-bed"></i>
+                                <p class="font-play text-4xl font-semibold">Get a hotel</p>
+                                <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                                    laudantium
+                                    perferendis cupiditate vitae.</p>
+                                <a href="#" class="group text-sm font-semibold space-x-1 duration-500">
+                                    <span class="group-hover:text-[#FF0000]">Lets Go</span>
+                                    <span class="ml-2 group-hover:ml-3 group-hover:text-[#FF0000] duration-300">→</span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 
     <!-- Font Awesome -->

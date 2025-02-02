@@ -39,7 +39,7 @@ function navToggle() {
 
 var swiper2 = new Swiper(".mySwiper2", {
     slidesPerView: 1,
-    spaceBetween: 10,    
+    spaceBetween: 10,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -57,5 +57,16 @@ var swiper2 = new Swiper(".mySwiper2", {
             slidesPerView: 3,
             spaceBetween: 40,
         }
+    },
+});
+
+var swiper3 = new Swiper(".mySwiper3", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
 });
