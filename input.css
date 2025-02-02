@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* General Style */
+@layer base {
+    * {
+        @apply m-0 p-0 box-border no-underline font-play;
+    }
+}
+
+/* General Style */
+
+/* Swiper Styles */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Swiper Styles */
+
+.item-gradient {
+    @apply absolute top-0 bottom-1/3 right-0 left-0 bg-gradient-to-b to-transparent from-slate-900 opacity-80 -z-10;
+}
+
+.item-gradient-2 {
+    @apply absolute top-3/4 bottom-0 right-0 left-0 bg-gradient-to-b to-slate-900 from-transparent opacity-70 -z-10;
+}

@@ -4,17 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple-Tailwind-Starter</title>
+    <title>N&R Travels</title>
+
+    <link rel="shortcut icon" type="image/png" href="Images/Home/logo.jpeg" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+        rel="stylesheet">
+
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <h1 class="text-3xl">Simple-Tailwind-Starter</h1>
+    <!-- Home Section -->
+    <section id="Home" class="container mx-auto">
+
+        <div class="item-gradient"></div>
+
+        <!-- Background Container -->
+        <div class="absolute top-0 bottom-0 right-0 left-0 -z-20">
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Images/Home/background-image-1.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/Home/background-image-1.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Background Container -->
+
+        <!-- TODO.. -->
+        <div class="text-white text-5xl">Hello this is NR Travels</div>
 
 
+        <div class="item-gradient-2"></div>
 
+    </section>
+    <!-- Home Section -->
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
 
 </body>
 
