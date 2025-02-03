@@ -124,17 +124,18 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 var swiper3 = new Swiper(".mySwiper3", {
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
     },
 });
 
-
+var swiper4 = new Swiper(".mySwiper4", {
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+});
 
 
 document.querySelectorAll('#item').forEach(item => {
