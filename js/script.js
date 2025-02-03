@@ -116,10 +116,6 @@ var swiper2 = new Swiper(".mySwiper2", {
             slidesPerView: 2,
             spaceBetween: 40,
         },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-        },
         992: {
             slidesPerView: 3,
             spaceBetween: 40,
@@ -141,26 +137,23 @@ var swiper3 = new Swiper(".mySwiper3", {
 
 
 
+document.querySelectorAll('#item').forEach(item => {
+    const hoverBox = item.querySelector('#hover-box');
+    const text = item.querySelector('#text');
 
-const hoverBox = document.getElementById('hover-box');
-const item = document.getElementById('item');
-const text = document.getElementById('text');
+    item.addEventListener('mouseenter', () => {
+        hoverBox.classList.remove('animate-down', 'hidden');
+        hoverBox.classList.add('animate-up');
+        text.classList.add('hidden');
+    });
 
-item.addEventListener('mouseenter', () => {
-    hoverBox.classList.remove('animate-down');
-    hoverBox.classList.add('animate-up');
-    hoverBox.classList.remove('hidden'); // Ensure hover-box appears
-    text.classList.add('hidden'); // Hide text immediately on hover
+    item.addEventListener('mouseleave', () => {
+        hoverBox.classList.remove('animate-up');
+        hoverBox.classList.add('animate-down');
+
+        setTimeout(() => {
+            hoverBox.classList.add('hidden');
+            text.classList.remove('hidden');
+        }, 800);
+    });
 });
-
-item.addEventListener('mouseleave', () => {
-    hoverBox.classList.remove('animate-up');
-    hoverBox.classList.add('animate-down');
-
-    // Delay hiding hover-box and showing text after animation ends
-    setTimeout(() => {
-        hoverBox.classList.add('hidden');
-        text.classList.remove('hidden'); // Show text only after animation is done
-    }, 800); // Match animation duration (0.8s)
-});
-
