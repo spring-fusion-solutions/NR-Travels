@@ -137,24 +137,147 @@ var swiper4 = new Swiper(".mySwiper4", {
     },
 });
 
+const showBroweserWidth = () => {
+    const width = window.innerWidth;
 
-document.querySelectorAll('#item').forEach(item => {
-    const hoverBox = item.querySelector('#hover-box');
-    const text = item.querySelector('#text');
+    document.querySelectorAll('#item').forEach(item => {
+        const hoverBox = item.querySelector('#hover-box');
+        const text = item.querySelector('#text');
 
-    item.addEventListener('mouseenter', () => {
-        hoverBox.classList.remove('animate-down', 'hidden');
-        hoverBox.classList.add('animate-up');
-        text.classList.add('hidden');
-    });
-
-    item.addEventListener('mouseleave', () => {
-        hoverBox.classList.remove('animate-up');
-        hoverBox.classList.add('animate-down');
-
-        setTimeout(() => {
+        if (width > 992) {
+            text.classList.add('block');
             hoverBox.classList.add('hidden');
-            text.classList.remove('hidden');
-        }, 800);
+
+            item.addEventListener('mouseenter', () => {
+                hoverBox.classList.remove('animate-down', 'hidden');
+                hoverBox.classList.add('animate-up');
+                text.classList.add('hidden');
+            });
+
+            item.addEventListener('mouseleave', () => {
+                hoverBox.classList.remove('animate-up');
+                hoverBox.classList.add('animate-down');
+
+                setTimeout(() => {
+                    hoverBox.classList.add('hidden');
+                    text.classList.remove('hidden');
+                }, 800);
+            });
+        } else {
+
+            text.classList.add('hidden');
+            hoverBox.classList.add('block');
+
+            hoverBox.id = "new-hover-box";
+            text.id = "new-text";
+
+        }
     });
-});
+
+}
+
+window.onload = showBroweserWidth;
+window.onresize = showBroweserWidth;
+
+/*
+// chatgpt----//
+
+// const showBroweserWidth = () => {
+//     const width = window.innerWidth;
+//     console.log(width);
+
+//     document.querySelectorAll('#item').forEach(item => {
+//         const hoverBox = item.querySelector('#hover-box');
+//         const text = item.querySelector('#text');
+
+//         if (width > 992) {
+//             text.classList.add('block');
+//             hoverBox.classList.add('hidden');
+
+//             item.addEventListener('mouseenter', () => {
+//                 hoverBox.classList.remove('animate-down', 'hidden');
+//                 hoverBox.classList.add('animate-up');
+//                 text.classList.add('hidden');
+//             });
+
+//             item.addEventListener('mouseleave', () => {
+//                 hoverBox.classList.remove('animate-up');
+//                 hoverBox.classList.add('animate-down');
+
+//                 setTimeout(() => {
+//                     hoverBox.classList.add('hidden');
+//                     text.classList.remove('hidden');
+//                 }, 800);
+//             });
+//         } else {
+
+//             text.classList.add('hidden');
+//             hoverBox.classList.add('block');
+
+//             hoverBox.id = "new-hover-box";
+//             text.id = "new-text";
+
+//         }
+//     });
+
+// }
+
+// window.onload = showBroweserWidth;
+// window.onresize = showBroweserWidth;
+*/
+
+/* new chatgt
+
+// const browserWidth = () => {
+//     const width = window.innerWidth;
+
+//     document.querySelectorAll('#item').forEach(item => {
+//         const hoverBox = item.querySelector('#hover-box');
+//         const text = item.querySelector('#text');
+
+//         if (width > 992) {
+//             // Large screens: Restore hover animation
+//             text.classList.remove('hidden');
+//             hoverBox.classList.add('hidden');
+
+//             hoverBox.id = "hover-box";
+//             text.id = "text";
+
+//             // Add hover event listeners
+//             item.addEventListener('mouseenter', () => {
+//                 hoverBox.classList.remove('animate-down', 'hidden');
+//                 hoverBox.classList.add('animate-up');
+//                 text.classList.add('hidden');
+//             });
+
+//             item.addEventListener('mouseleave', () => {
+//                 hoverBox.classList.remove('animate-up');
+//                 hoverBox.classList.add('animate-down');
+
+//                 setTimeout(() => {
+//                     hoverBox.classList.add('hidden');
+//                     text.classList.remove('hidden');
+//                 }, 800);
+//             });
+
+//         } else {
+//             // Small screens: Show hoverBox, hide text (no animation)
+//             text.classList.add('hidden');
+//             hoverBox.classList.add('block');
+
+//             // Remove hover animations (if any were applied before resizing)
+//             hoverBox.classList.remove('animate-up', 'animate-down', 'hidden');
+//             text.classList.remove('block');
+
+//             // Assign new IDs
+//             hoverBox.id = "new-hover-box";
+//             text.id = "new-text";
+//         }
+//     });
+// };
+
+// // Run on page load and resize
+// window.addEventListener('load', browserWidth);
+// window.addEventListener('resize', browserWidth);
+
+*/
