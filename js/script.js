@@ -107,6 +107,7 @@ aTags.forEach(link => {
 var swiper2 = new Swiper(".mySwiper2", {
     slidesPerView: 1,
     spaceBetween: 10,
+    loop: true,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -124,6 +125,7 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 var swiper3 = new Swiper(".mySwiper3", {
+    loop: true,
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
