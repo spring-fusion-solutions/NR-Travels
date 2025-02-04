@@ -15,7 +15,7 @@ module.exports = {
         play: ['"Playfair"', 'serif']
       },
       backgroundImage: () => ({
-        footer: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(../Images/Footer/footer-bg.jpg)",
+        footer: "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),url(../Images/Footer/footer-bg.jpg)",
       }),
     },
   },
