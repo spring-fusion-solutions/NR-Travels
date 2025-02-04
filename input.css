@@ -42,17 +42,30 @@
     @apply absolute top-1/2 bottom-0 right-0 left-0 bg-gradient-to-b to-slate-900 from-transparent opacity-65 -z-10;
 }
 
-.hvr::before {
+.hvr::before,
+.hvr-2::before {
     content: "";
     position: absolute;
     height: 1px;
     border-radius: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #FF0000;
     visibility: hidden;
     width: 0;
     transition: all .2s ease;
+}
+
+.hvr::before {
+    background-color: #FF0000;
+}
+
+.hvr-2::before {
+    background-color: white;
+}
+
+.hvr-2:hover::before {
+    visibility: visible;
+    width: 100%;
 }
 
 .hvr:hover::before,
@@ -203,13 +216,10 @@
 }
 
 #new-text {
-    @apply hidden
+    @apply hidden;
 }
 
-/* #old-hover-box {
-    @apply hidden space-y-5 backdrop-blur-sm bg-white/20 rounded-xl shadow-md p-3;
-}
 
-#old-text {
-    @apply block text-3xl md:text-5xl font-semibold font-play duration-500 transition-all;
-} */
+.ficon:hover {
+    filter: invert(53%) sepia(38%) saturate(3303%) hue-rotate(326deg) brightness(101%) contrast(96%);
+}

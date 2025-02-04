@@ -58,7 +58,7 @@ links.forEach(link => {
 
 const aTags = document.querySelectorAll('.hvr');
 const sections = document.querySelectorAll('section');
-const homeLink = document.querySelector('.hvr[href="#Home"]'); // Select Home link
+// const homeLink = document.querySelector('.hvr[href="#Home"]'); // Select Home link
 
 // Function to remove active styles from all aTags
 function removeActiveStyles() {
@@ -66,11 +66,11 @@ function removeActiveStyles() {
 }
 
 // Set Home as active initially
-homeLink.classList.add('active', 'text-[#FF0000]');
+// homeLink.classList.add('active', 'text-[#FF0000]');
 
 // Intersection Observer to track scrolling
 const observer = new IntersectionObserver(entries => {
-    let anySectionVisible = false; // Track if any section is visible
+    // let anySectionVisible = false; // Track if any section is visible
 
     entries.forEach(entry => {
         const targetId = entry.target.getAttribute('id');
@@ -79,15 +79,15 @@ const observer = new IntersectionObserver(entries => {
         if (entry.isIntersecting) {
             removeActiveStyles();
             targetLink.classList.add('active', 'text-[#FF0000]');
-            anySectionVisible = true;
+            // anySectionVisible = true;
         }
     });
 
     // If no section is visible (e.g., scrolled to top), keep Home active
-    if (!anySectionVisible) {
-        removeActiveStyles();
-        homeLink.classList.add('active', 'text-[#FF0000]');
-    }
+    // if (!anySectionVisible) {
+    //     removeActiveStyles();
+    //     homeLink.classList.add('active', 'text-[#FF0000]');
+    // }
 }, {
     threshold: 0.6 // Trigger when 60% of the section is visible
 });
