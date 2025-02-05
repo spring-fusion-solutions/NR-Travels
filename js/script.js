@@ -78,6 +78,8 @@ const observer = new IntersectionObserver(entries => {
 
         if (entry.isIntersecting) {
             removeActiveStyles();
+            console.log("Observed Section ID:", targetId);
+
             targetLink.classList.add('active', 'text-[#FF0000]');
             // anySectionVisible = true;
         }
