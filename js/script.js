@@ -1,44 +1,56 @@
-const showBroweserWidth = () => {
-    const width = window.innerWidth;
+document.addEventListener("DOMContentLoaded", () => {
+    function handleHoverEffects() {
+        const screenWidth = window.innerWidth;
+        const isLargeScreen = screenWidth >= 992;
 
-    document.querySelectorAll('#item').forEach(item => {
-        const hoverBox = item.querySelector('#hover-box');
-        const text = item.querySelector('#text');
+        document.querySelectorAll(".item-outer").forEach((itemOuter) => {
+            const itemInner = itemOuter.querySelector(".item-absolute-inner");
+            const paragraphWrapper = itemInner.querySelector(".paragraph-wrapper");
 
-        if (width > 1080) {
-            text.classList.add('block');
-            hoverBox.classList.add('hidden');
+            if (isLargeScreen) {
+                // Enable Hover Effects for Large Screens
+                itemInner.classList.remove("visible-on-small"); // Ensure it's hidden by default on large screens
 
-            item.addEventListener('mouseenter', () => {
-                hoverBox.classList.remove('animate-down', 'hidden');
-                hoverBox.classList.add('animate-up');
-                text.classList.add('hidden');
-            });
+                itemOuter.addEventListener("mouseenter", () => {
+                    itemInner.classList.add("animate-height-expand", "backdrop-blur-sm", "bg-white/20");
+                    paragraphWrapper.classList.add("opacity100");
+                    paragraphWrapper.classList.remove("opacity0");
+                    itemInner.setAttribute("data-expanded", "true");
+                });
 
-            item.addEventListener('mouseleave', () => {
-                hoverBox.classList.remove('animate-up');
-                hoverBox.classList.add('animate-down');
+                itemOuter.addEventListener("mouseleave", () => {
+                    itemInner.classList.remove("animate-height-expand");
+                    itemInner.classList.add("animate-height-shrink");
+                    itemInner.setAttribute("data-expanded", "false");
 
-                setTimeout(() => {
-                    hoverBox.classList.add('hidden');
-                    text.classList.remove('hidden');
-                }, 800);
-            });
-        } else {
+                    setTimeout(() => {
+                        if (itemInner.getAttribute("data-expanded") === "false") {
+                            itemInner.classList.remove("backdrop-blur-sm", "bg-white/20");
+                            paragraphWrapper.classList.add("opacity0");
+                            paragraphWrapper.classList.remove("opacity100");
+                        }
+                        itemInner.classList.remove("animate-height-shrink"); // Reset class after animation
+                    }, 800); // Matches height animation duration
+                });
+            } else {
+                // Disable Hover Effects for Small Screens
+                itemInner.classList.remove("animate-height-expand", "animate-height-shrink");
+                itemInner.classList.add("backdrop-blur-sm", "bg-white/20");
+                paragraphWrapper.classList.remove("opacity0");
+                paragraphWrapper.classList.add("opacity100");
+                itemInner.classList.add("visible-on-small"); // Ensure it's always visible
+            }
+        });
+    }
 
-            text.classList.add('hidden');
-            hoverBox.classList.add('block');
+    // Run on load
+    handleHoverEffects();
 
-            hoverBox.id = "new-hover-box";
-            text.id = "new-text";
+    // Run on resize
+    window.addEventListener("resize", handleHoverEffects);
+});
 
-        }
-    });
 
-}
-
-window.onload = showBroweserWidth;
-window.onresize = showBroweserWidth;
 
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,

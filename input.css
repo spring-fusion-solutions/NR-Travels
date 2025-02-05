@@ -178,6 +178,67 @@
     }
 }
 
+/* ========== Height Animation ========== */
+@keyframes height-expand {
+    0% {
+        height: 4rem;
+    }
+
+    100% {
+        height: 12rem;
+    }
+}
+
+@keyframes height-shrink {
+    0% {
+        height: 12rem;
+    }
+
+    100% {
+        height: 4rem;
+    }
+}
+
+.animate-height-expand {
+    animation: height-expand 0.8s ease forwards;
+}
+
+.animate-height-shrink {
+    animation: height-shrink 0.8s ease forwards;
+}
+
+/* ========== Opacity Transitions ========== */
+.opacity0 {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.opacity100 {
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+
+/* ========== Responsive Styles ========== */
+@media (min-width: 992px) {
+    .item-absolute-inner {
+        transition: height 0.8s ease;
+    }
+}
+
+@media (max-width: 991px) {
+    .item-absolute-inner {
+        height: auto !important;
+    }
+
+    .visible-on-small {
+        display: block !important;
+        /* Ensure it's visible on small screens */
+        height: auto !important;
+        opacity: 1 !important;
+    }
+}
+
 .animate-in {
     animation: slide-in 0.8s ease forwards;
 }
@@ -185,15 +246,6 @@
 .animate-out {
     animation: slide-out 0.8s ease forwards;
 }
-
-.animate-up {
-    animation: slide-up 0.8s ease forwards;
-}
-
-.animate-down {
-    animation: slide-down 0.8s ease forwards;
-}
-
 
 .btn-blur {
     @apply flex backdrop-blur-sm bg-white/30 cursor-pointer rounded-full justify-center items-center border-2 border-black;
