@@ -5,7 +5,7 @@ const showBroweserWidth = () => {
         const hoverBox = item.querySelector('#hover-box');
         const text = item.querySelector('#text');
 
-        if (width > 992) {
+        if (width > 1080) {
             text.classList.add('block');
             hoverBox.classList.add('hidden');
 
