@@ -2,6 +2,7 @@ const showBroweserWidth = () => {
     const width = window.innerWidth;
 
     document.querySelectorAll('#item').forEach(item => {
+        // console.log(item.innerHTML);
         const hoverBox = item.querySelector('#hover-box');
         const text = item.querySelector('#text');
 
@@ -35,10 +36,14 @@ const showBroweserWidth = () => {
         }
     });
 
+ 
 }
 
-window.onload = showBroweserWidth;
-window.onresize = showBroweserWidth;
+// window.onload = showBroweserWidth;
+// window.onresize = showBroweserWidth;
+
+// window.addEventListener('resize' , showBroweserWidth());
+window.addEventListener('load' , showBroweserWidth());
 
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
