@@ -14,6 +14,10 @@ module.exports = {
         sans: ['"Inter"', 'serif'],
         play: ['"Playfair"', 'serif']
       },
+      colors: {
+        softPink: '#fff8f7',
+        redPrimary: '#FF0000'
+      },
       backgroundImage: () => ({
         footer: "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),url(../Images/Footer/footer-bg.jpg)",
       }),
