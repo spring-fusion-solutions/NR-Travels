@@ -16,10 +16,11 @@ module.exports = {
       },
       colors: {
         softPink: '#fff8f7',
-        redPrimary: '#FF0000'
+        redPrimary: '#FF0000',
+        softBlack: 'rgba(0,0,0, 0.75)'
       },
       backgroundImage: () => ({
-        footer: "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),url(../Images/Footer/footer-bg.jpg)",
+        footer: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(../Images/Footer/footer-bg.jpg)",
       }),
     },
   },

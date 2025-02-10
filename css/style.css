@@ -1001,6 +1001,10 @@ h3 {
   background-color: rgb(3 105 161 / var(--tw-bg-opacity, 1));
 }
 
+.bg-softBlack {
+  background-color: rgba(0,0,0, 0.75);
+}
+
 .bg-softPink {
   --tw-bg-opacity: 1;
   background-color: rgb(255 248 247 / var(--tw-bg-opacity, 1));
@@ -1016,7 +1020,7 @@ h3 {
 }
 
 .bg-footer {
-  background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),url(../Images/Footer/footer-bg.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(../Images/Footer/footer-bg.jpg);
 }
 
 .bg-contain {
@@ -1149,11 +1153,6 @@ h3 {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-lg {
@@ -1412,6 +1411,7 @@ h3 {
 
 .open .hamburger-top {
   transform: rotate(45deg) translateY(6px) translateX(6px);
+  background: white;
 }
 
 .open .hamburger-middle {
@@ -1420,6 +1420,7 @@ h3 {
 
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background: white;
 }
 
 /* Animation CSS */
@@ -1743,11 +1744,6 @@ h3 {
 
   .md\:text-5xl {
     font-size: 3rem;
-    line-height: 1;
-  }
-
-  .md\:text-6xl {
-    font-size: 3.75rem;
     line-height: 1;
   }
 
